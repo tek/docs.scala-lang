@@ -608,7 +608,7 @@
     description: "Print a message whenever an implicit conversion is inserted."
     abbreviations:
     - "-Xlog-implicit-conversions"
-  - option: "-Vimplicits"
+  - option: "-Vexplain-implicits"
     schema:
       type: "Boolean"
     description: "Show more detail on why some implicits are not applicable."
@@ -780,6 +780,22 @@
     description: "Trace type assignments."
     abbreviations:
     - "-Ytyper-debug"
+  - option: "-Vexplain-implicits:enable"
+    schema:
+      type: "Boolean"
+  - option: "-Vexplain-implicits:no-color"
+    schema:
+      type: "Boolean"
+    description: "Print implicit chains without color."
+  - option: "-Vexplain-implicits:verbose-tree"
+    schema:
+      type: "Boolean"
+    description: "Print implicit chains all intermediates."
+  - option: "-Vexplain-implicits:trunc-refined"
+    schema:
+      type: "Int"
+      default: "0"
+    description: "Truncate refined types longer than this value in implicit chains."
 - category: "Private Settings"
   description:
   options:
